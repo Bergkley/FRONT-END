@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de Endereço através de CEP</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Consulta de Endereço através de CEP</h1>
+        <input type="text" id="cep" name="cep" placeholder="Digite o seu CEP" onkeyup="formatarCEP(this)">
+        <button onclick="consultarCEP()">Consultar</button>
+        <button onclick="limparCampos()">Limpar</button>
+        <h2>Resultado</h2>
+        <table id="resultadoTable"></table>
+    </div>
+
+    <script type="text/javascript" src="index.js"></script>
+</body>
+</html>
