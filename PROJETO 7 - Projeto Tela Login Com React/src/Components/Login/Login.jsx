@@ -1,53 +1,57 @@
-import React from "react";
-import { FaUser, FaLock } from "react-icons/fa";
 import { useState } from "react";
+import { FaUser, FaLock } from "react-icons/fa";
 import "./Login.css";
 
 const Login = () => {
+  // Estados para armazenar as entradas do usuário
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+
+  // Função que é chamada quando o formulário é enviado
   const handleSubmit = (event) => {
+    // Impede que a página seja recarregada
     event.preventDefault();
-    alert("Enviando os dados:" + username + " - " + password);
+
+    // Faz o console log das credenciais do usuário
+    console.log("Dados de Login:", { username, password });
   };
 
   return (
     <div className="container">
       <form onSubmit={handleSubmit}>
         <h1>Acesse o sistema</h1>
-        <div>
+        <div className="input-field">
           <input
-            type="email"
-            required
+            type="text"
             placeholder="E-mail"
+            required
+            value={username}
             onChange={(e) => setUsername(e.target.value)}
           />
           <FaUser className="icon" />
         </div>
-        <div>
+        <div className="input-field">
           <input
             type="password"
-            required
             placeholder="Senha"
+            required
+            value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
           <FaLock className="icon" />
         </div>
-        <div className="recal-forget">
-          <label htmlFor="">
+
+        <div className="recall-forget">
+          <label>
             <input type="checkbox" />
             Lembre de mim
           </label>
-          <a href="#" target="_blank">
-            Esqueceu sua senha?
-          </a>
+          <a href="#">Esqueceu sua senha?</a>
         </div>
-
-        <button>Entrar</button>
-
+        <button type="submit">Login</button>
         <div className="signup-link">
           <p>
-            Ainda não tem uma conta? <a href="#">Registrar</a>
+            Não tem uma conta? <a href="#">Registar</a>{" "}
           </p>
         </div>
       </form>
