@@ -5,7 +5,7 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin: 0; /* Remove default body margin */
+  margin: 0; 
   font-family: "Quicksand", sans-serif; /* Use Quicksand font for the entire document */
 }
 
