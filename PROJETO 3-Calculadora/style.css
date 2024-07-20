@@ -50,7 +50,7 @@ body {
 }
 
 .keys:active {
-  background: #34495e; /* Darker color on key press */
+  background: #34495e; 
   box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.2);
   color: #ecf0f1;
 }
