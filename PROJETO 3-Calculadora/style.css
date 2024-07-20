@@ -10,7 +10,7 @@ body {
 }
 
 #calc {
-  width: 300px; /* Reduced width for a more compact design */
+  width: 300px; 
   max-width: 100%;
   padding: 15px;
   border-radius: 15px;
